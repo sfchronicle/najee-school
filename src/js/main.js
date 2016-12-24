@@ -8,6 +8,10 @@ require("velocity-animate");
 
 ["alabama","auburn","cal","michigan","ohio","ucla","usc"].forEach(function(d,idx){
   console.log(idx);
-  Velocity(document.getElementById(d),{"translateY": "200px"},{duration:1500, easing: "spring", delay: idx*1200});
-  Velocity(document.getElementById(d),{"opacity": 0},{duration:1500, delay: 10000});
+  Velocity(document.getElementById(d),{"translateY": "400px"},{duration:1500, easing: "spring", delay: idx*200});
+  if (d != "cal") {
+    Velocity(document.getElementById(d),{"opacity": 0},{duration:1500, delay: 5000});
+  } else {
+    Velocity(document.getElementById(d),{"height": "*=10"},{duration:1500, delay: 5000});
+  }
 });
