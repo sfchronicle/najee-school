@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.seo_title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="__sync_contentCategory" content="meterA">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- scripts for stand-alone projects, comment for embedded projects -->
+    <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
+    <!-- also replace <body> with <body is="responsive-body"> -->
+
+    <%= t.include("partials/_head.html") %>
+
+  </head>
+
+  <%= !json.project.embedded ? "<body>" : "<body is='reponsive-body'>" %>
+
+    <div class="big-helmet-container">
+      <div class="helmet-container wiggle-even" id="alabama">
+        <div class="helmet-layer">
+          <div class="helmet even active"><img src="./assets/graphics/alabama.png"></div>
+        </div>
+      </div>
+      <div class="helmet-container wiggle-odd" id="auburn">
+        <div class="helmet-layer">
+          <div class="helmet even"><img src="./assets/graphics/auburn.png"></div>
+        </div>
+      </div>
+      <div class="helmet-container wiggle-even" id="cal">
+        <div class="helmet-layer">
+          <div class="helmet odd"><img src="./assets/graphics/cal.png"></div>
+        </div>
+      </div>
+      <div class="helmet-container wiggle-odd" id="michigan">
+        <div class="helmet-layer">
+          <div class="helmet even"><img src="./assets/graphics/michigan.png"></div>
+        </div>
+      </div>
+      <div class="helmet-container wiggle-even" id="ohio">
+        <div class="helmet-layer">
+          <div class="helmet odd"><img src="./assets/graphics/ohio.png"></div>
+        </div>
+      </div>
+      <div class="helmet-container wiggle-even" id="ucla">
+        <div class="helmet-layer">
+          <div class="helmet odd"><img src="./assets/graphics/ucla.png"></div>
+        </div>
+      </div>
+      <div class="helmet-container wiggle-even" id="usc">
+        <div class="helmet-layer">
+          <div class="helmet odd"><img src="./assets/graphics/usc.png"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>

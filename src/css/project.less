@@ -1,0 +1,83 @@
+.big-helmet-container {
+  // max-width: 900px;
+  padding-bottom: 500px;
+  .display-flex;
+  .flex-wrap(wrap);
+  background-image: url("http://ww1.hdnux.com/photos/51/21/44/11781037/5/900x900.jpg");
+  // background-position: right;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  // background-color: darken(@sea-blue,10%);
+  // border: 1px solid @light-gray;
+  justify-content: center;
+  .helmet-container {
+    margin: auto;
+    .flex(0 0 10%);
+    @media @mobile {
+      .flex(0 0 19.5%);
+    }
+  }
+  .helmet {
+    clear: both;
+    // opacity: 0.8;
+    cursor: pointer;
+    margin: 10px;
+    @media @mobile {
+      margin: 1px;
+    }
+    display: inline-block;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    vertical-align: center;
+  }
+}
+
+.wiggle-odd {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation: jiggle 1s infinite;
+    -moz-animation-duration: 1s;
+    -moz-animation-name: jiggle;
+    -moz-animation-iteration-count: infinite;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    // width: 500px;
+}
+.wiggle-even {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation: jiggleOdd 0.5s infinite;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-name: jiggleOdd;
+    -moz-animation-iteration-count: infinite;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    // width: 500px;
+}
+
+@-moz-keyframes jiggle {
+    0% {-moz-transform: rotate(-1deg);}
+    50% {-moz-transform: rotate(1deg);}
+}
+
+@-webkit-keyframes jiggle {
+    0% {-webkit-transform: rotate(-1deg);}
+    50% {-webkit-transform: rotate(1deg);}
+}
+
+@-moz-keyframes jiggleOdd {
+    0% {-moz-transform: rotate(1deg);}
+    50% {-moz-transform: rotate(-1deg);}
+}
+
+@-webkit-keyframes jiggleOdd {
+    0% {-webkit-transform: rotate(1deg);}
+    50% {-webkit-transform: rotate(-1deg);}
+}
